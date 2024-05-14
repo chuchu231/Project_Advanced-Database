@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F8EC90B-392B-4619-8DE0-44D31035E64B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CSDLNC</RootNamespace>
+    <AssemblyName>CSDLNC</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.5\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cons.cs" />
+    <Compile Include="CreateAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccountForm.Designer.cs">
+      <DependentUpon>CreateAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSDLNC05DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSDLNC05DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CSDLNCDataSet.cs">
+      <DependentUpon>CSDLNCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CSDLNCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSDLNCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dentist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dentist.Designer.cs">
+      <DependentUpon>Dentist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeStaff.Designer.cs">
+      <DependentUpon>HomeStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainControl.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_AddAppointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AddAppointment.designer.cs">
+      <DependentUpon>UC_AddAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AddJob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AddJob.Designer.cs">
+      <DependentUpon>UC_AddJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AddTooth.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AddTooth.Designer.cs">
+      <DependentUpon>UC_AddTooth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AddTreatment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AddTreatment.Designer.cs">
+      <DependentUpon>UC_AddTreatment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Add_Appointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Add_Appointment.Designer.cs">
+      <DependentUpon>UC_Add_Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Add_Patient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Add_Patient.Designer.cs">
+      <DependentUpon>UC_Add_Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AddNewStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AddNewStaff.Designer.cs">
+      <DependentUpon>UC_AddNewStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Complete_Plan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Complete_Plan.Designer.cs">
+      <DependentUpon>UC_Complete_Plan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AddMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AddMed.Designer.cs">
+      <DependentUpon>UC_AddMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_AppointmentList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_AppointmentList.Designer.cs">
+      <DependentUpon>UC_AppointmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Dentist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Dentist.Designer.cs">
+      <DependentUpon>UC_Dentist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DentistList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DentistList.designer.cs">
+      <DependentUpon>UC_DentistList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_DSHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_DSHoaDon.Designer.cs">
+      <DependentUpon>UC_DSHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_EditAppointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_EditAppointment.Designer.cs">
+      <DependentUpon>UC_EditAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_EditInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_EditInvoice.Designer.cs">
+      <DependentUpon>UC_EditInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_EditMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_EditMed.Designer.cs">
+      <DependentUpon>UC_EditMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Edit_Appointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Edit_Appointment.Designer.cs">
+      <DependentUpon>UC_Edit_Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Edit_Staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Edit_Staff.Designer.cs">
+      <DependentUpon>UC_Edit_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Job.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Job.Designer.cs">
+      <DependentUpon>UC_Job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Job_Dentist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Job_Dentist.Designer.cs">
+      <DependentUpon>UC_Job_Dentist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_LichNhaSi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_LichNhaSi.Designer.cs">
+      <DependentUpon>UC_LichNhaSi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_LichNhaSi_Staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_LichNhaSi_Staff.Designer.cs">
+      <DependentUpon>UC_LichNhaSi_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Patient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Patient.Designer.cs">
+      <DependentUpon>UC_Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Patient_Info.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Patient_Info.Designer.cs">
+      <DependentUpon>UC_Patient_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_PaymentList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_PaymentList.Designer.cs">
+      <DependentUpon>UC_PaymentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Payment_Detail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Payment_Detail.Designer.cs">
+      <DependentUpon>UC_Payment_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_MedList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_MedList.Designer.cs">
+      <DependentUpon>UC_MedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SearchInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_SearchInvoice.Designer.cs">
+      <DependentUpon>UC_SearchInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Staff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Staff.Designer.cs">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_StaffList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_StaffList.designer.cs">
+      <DependentUpon>UC_StaffList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_TaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_TaiKhoan.Designer.cs">
+      <DependentUpon>UC_TaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ThongKe.Designer.cs">
+      <DependentUpon>UC_ThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Treatment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Treatment.Designer.cs">
+      <DependentUpon>UC_Treatment.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Client.resx">
+      <DependentUpon>Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccountForm.resx">
+      <DependentUpon>CreateAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dentist.resx">
+      <DependentUpon>Dentist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeStaff.resx">
+      <DependentUpon>HomeStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UC_AddAppointment.resx">
+      <DependentUpon>UC_AddAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AddJob.resx">
+      <DependentUpon>UC_AddJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AddNewStaff.resx">
+      <DependentUpon>UC_AddNewStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AddTooth.resx">
+      <DependentUpon>UC_AddTooth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AddTreatment.resx">
+      <DependentUpon>UC_AddTreatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Add_Appointment.resx">
+      <DependentUpon>UC_Add_Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Add_Patient.resx">
+      <DependentUpon>UC_Add_Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Complete_Plan.resx">
+      <DependentUpon>UC_Complete_Plan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AddMed.resx">
+      <DependentUpon>UC_AddMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_AppointmentList.resx">
+      <DependentUpon>UC_AppointmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Dentist.resx">
+      <DependentUpon>UC_Dentist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DentistList.resx">
+      <DependentUpon>UC_DentistList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DSHoaDon.resx">
+      <DependentUpon>UC_DSHoaDon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_EditAppointment.resx">
+      <DependentUpon>UC_EditAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_EditInvoice.resx">
+      <DependentUpon>UC_EditInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_EditMed.resx">
+      <DependentUpon>UC_EditMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Edit_Appointment.resx">
+      <DependentUpon>UC_Edit_Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Edit_Staff.resx">
+      <DependentUpon>UC_Edit_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Job.resx">
+      <DependentUpon>UC_Job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Job_Dentist.resx">
+      <DependentUpon>UC_Job_Dentist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_LichNhaSi.resx">
+      <DependentUpon>UC_LichNhaSi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_LichNhaSi_Staff.resx">
+      <DependentUpon>UC_LichNhaSi_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_MedList.resx">
+      <DependentUpon>UC_MedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Patient.resx">
+      <DependentUpon>UC_Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Patient_Info.resx">
+      <DependentUpon>UC_Patient_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_PaymentList.resx">
+      <DependentUpon>UC_PaymentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Payment_Detail.resx">
+      <DependentUpon>UC_Payment_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SearchInvoice.resx">
+      <DependentUpon>UC_SearchInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Staff.resx">
+      <DependentUpon>UC_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_StaffList.resx">
+      <DependentUpon>UC_StaffList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_TaiKhoan.resx">
+      <DependentUpon>UC_TaiKhoan.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ThongKe.resx">
+      <DependentUpon>UC_ThongKe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Treatment.resx">
+      <DependentUpon>UC_Treatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CSDLNC05DataSet.xsc">
+      <DependentUpon>CSDLNC05DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CSDLNC05DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CSDLNC05DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CSDLNC05DataSet.xss">
+      <DependentUpon>CSDLNC05DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CSDLNCDataSet.xsc">
+      <DependentUpon>CSDLNCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CSDLNCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CSDLNCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CSDLNCDataSet.xss">
+      <DependentUpon>CSDLNCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_2e4067a3-3407-41b4-ac55-a0ee762c09f0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4038155-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multiple-users-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\timetable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LichNhaSi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DSHoaDon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dentalimg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seenpass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passwordlogologo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logopass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pre_Logo.jpg" />
+    <None Include="Resources\PHẦN MỀM QUẢN LÝ NHA KHOA.jpg" />
+    <Content Include="Resources\vi-tri-rang-1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
